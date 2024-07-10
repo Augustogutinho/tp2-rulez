@@ -6,6 +6,12 @@ app.get('/', (request, response) => {
     let num1 = 5
     let num2 = 10
 
- response.send(`A soma de 5 x 10 é igual ${num1 *num2}`)
+ response.send(`A soma de 100 x 10 é igual ${num1 *num2}`)
 })
-app.listen(8080)
+ app.get('/index', (request, response) => {
+    response.render('conta')
+ })
+const PORTA = 8080
+app.listen (PORTA, () => {
+    console.log(`Servidor rodando em http://lcalhost:${PORTA}`);
+})
