@@ -3,13 +3,17 @@ const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
 app.get('/', (request, response) => {
-    let num1 = 5
-    let num2 = 10
+  resposta = ""  
 
- response.send(`A soma de 100 x 10 é igual ${num1 *num2}`)
+ response.render(`conta`)
 })
- app.get('/index', (request, response) => {
-    response.render('conta')
+ app.post('/resultado', (request, response) => {
+   let n1 = parseFloat(request.body.n1)
+   let n2 = parseFloat(request.body.n2)
+   let n3 = parseFloat(request.body.n3)
+
+    resposta = (n2 * n3) / n1
+    response.render('conta',{resposta})
  })
 const PORTA = 8080
 app.listen (PORTA, () => {

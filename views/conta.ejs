@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <body>
-    <form method="post" action="resultado">
-        Digite um número:
+    <form method="post" action="/resultado">
+        Digite três número:
         <input id="n1" type="number" name="n1">
         <input id="n2" type="number" name="n2">
+        <input id="n3" type="number" name="n3">
 
-        <input type="button" value="Multiplique por ">
+        <input type="submit" value="regra de três ">
     </form>
-    
+    <%=resposta%>
     <script>
         var n1 = window.document.querySelector('input#n1')
         var n2 = window.document.querySelector('input#n2')
