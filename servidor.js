@@ -6,6 +6,17 @@ app.get('/', (request, response) => {
   resposta = ""  
 
  response.render(`conta`)
+
+ app.get('/fronte', (request,response) => {
+  response.render(`cesinha`)
+
+app.post('/resultado2', (request,response) => {
+  let n1 = parseFloat(request.body.n1)
+  let n2 = parseFloat(request.body.n2)
+
+})
+ })
+
 })
  app.post('/resultado', (request, response) => {
    let n1 = parseFloat(request.body.n1)
