@@ -6,13 +6,31 @@
  </head>
  <body>
   <h1>Digite dois números:</h1>
-  <form action="/resultado2" method="post" id="form1">
+
+  <form action="/res1" method="post" id="form1">
    <input type="text" name="n1"id="n1"/>
    <input type="text" name="n2"id="n2"/>
-   <input type="text" name="n3"id="n3"/>
-   <input type="submit"/>
+   <input type="submit" value="+"/>
   </form>
-  <h1>Resultado:</h1>
-  <h1 id="resultado"></h1>
+
+  <form action="/res2" method="post" id="form1">
+    <input type="text" name="n1"id="n1"/>
+    <input type="text" name="n2"id="n2"/>
+    <input type="submit" value="-"/>
+   </form>
+
+   <form action="/res3" method="post" id="form1">
+    <input type="text" name="n1"id="n1"/>
+    <input type="text" name="n2"id="n2"/>
+    <input type="submit" value="*"/>
+   </form>
+
+   <form action="/res4" method="post" id="form1">
+    <input type="text" name="n1"id="n1"/>
+    <input type="text" name="n2"id="n2"/>
+    <input type="submit" value="/"/>
+   </form>
+
+  <h1>Resultado: <%=resul%></h1>
  </body>
 </html>

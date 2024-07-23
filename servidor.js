@@ -6,18 +6,49 @@ app.get('/', (request, response) => {
   resposta = ""  
 
  response.render(`conta`)
+})
+ app.get('/fronte',(request,response) => {
+  var resul = ""
+  response.render(`cesinha`, {resul})
+})
 
- app.get('/fronte', (request,response) => {
-  response.render(`cesinha`)
-
-app.post('/resultado2', (request,response) => {
+app.post('/res1', (request,response) => {
   let n1 = parseFloat(request.body.n1)
   let n2 = parseFloat(request.body.n2)
+  resul = n1 + n2
+  response.render(`cesinha`)
+
 
 })
- })
+
+app.post('/res2', (request,response) => {
+  let n1 = parseFloat(request.body.n1)
+  let n2 = parseFloat(request.body.n2)
+  resul = n1 - n2
+  response.render(`cesinha`)
+
 
 })
+
+app.post('/res3', (request,response) => {
+  let n1 = parseFloat(request.body.n1)
+  let n2 = parseFloat(request.body.n2)
+  resul = n1 * n2
+  response.render(`cesinha`)
+
+
+})
+
+app.post('/res4', (request,response) => {
+  let n1 = parseFloat(request.body.n1)
+  let n2 = parseFloat(request.body.n2)
+  resul = n1 / n2
+  response.render(`cesinha`)
+
+
+})
+
+
  app.post('/resultado', (request, response) => {
    let n1 = parseFloat(request.body.n1)
    let n2 = parseFloat(request.body.n2)
