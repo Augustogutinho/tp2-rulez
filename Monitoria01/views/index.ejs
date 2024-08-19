@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Cesinha</title>
+ </head>
+ <body>
+  <h1>Digite dois números:</h1>
+
+  <form id="formul" action="/" method="post">
+   <label> Número 1: </label>
+   <input id= "n1" name="n1"/>
+   <br>
+   <label> Número 2: </label>
+   <input id= "n2" name="n2"/>
+   <br>
+   <br>
+   <input type="button" onclick="ruim('/soma')" value="+"></input>
+   <input type="button" onclick="ruim('/sub')" value="-"></input>
+   <input type="button" onclick="ruim('/mult')" value="X"></input>
+   <input type="button" onclick="ruim('/div')" value="/"></input>
+  </form>
+
+  <h1>Resultado:</h1>
+  <h1 id="resultado"><%=resultado%></h1>
+  <script>
+    function ruim (rota) {
+     formul.action = rota 
+     if(n1.value == '' || n2.value == ''){
+      document.getElementById ('resultado').innerHTML = ''
+      alert('Tá sem nada irmão')
+     } else {
+      if(n2.value == 0 && rota == "/div"){
+      document.getElementById ('resultado').innerHTML = ''
+      alert('Zero nao ne pae')
+      } else {
+        formul.submit()
+      }
+     }
+    }
+  </script>
+ </body>
+</html>
