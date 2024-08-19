@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+ <body>
+  <h1>Digite dois números:</h1>
+
+  <form action="/res1" method="post" id="form1">
+   <input type="text" name="n1"id="n1"/>
+   <input type="text" name="n2"id="n2"/>
+   <input type="submit" value="+"/>
+  </form>
+
+  <form action="/res2" method="post" id="form1">
+    <input type="text" name="n1"id="n1"/>
+    <input type="text" name="n2"id="n2"/>
+    <input type="submit" value="-"/>
+   </form>
+
+   <form action="/res3" method="post" id="form1">
+    <input type="text" name="n1"id="n1"/>
+    <input type="text" name="n2"id="n2"/>
+    <input type="submit" value="*"/>
+   </form>
+
+   <form action="/res4" method="post" id="form1">
+    <input type="text" name="n1"id="n1"/>
+    <input type="text" name="n2"id="n2"/>
+    <input type="submit" value="/"/>
+   </form>
+
+   
+
+  <h1>Resultado: <%=result%></h1>
+ </body>
+</html>

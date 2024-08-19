@@ -1,0 +1,24 @@
+<section id="menu"><p>Menu</p>
+    <br>
+    <a href="/">Página inicio</a><br>
+    <a href="/erro">Página erro</a>
+</section>
+
+<input id="menuAba" type="button" value=">">
+
+<script>
+    let abertoFechado = false
+    menuAba.addEventListener('click', () => {
+        if (abertoFechado == false) {
+            menuAba.value = '<'
+            abertoFechado = true
+            menu.style.opacity = '1'
+            menu.style.width = '10%'
+        } else {
+            menuAba.value = '>'
+            abertoFechado = false
+            menu.style.opacity = '0'
+            menu.style.width = '0%'
+        }
+    })
+</script>
