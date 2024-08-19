@@ -29,6 +29,6 @@ app.post('/welcome', (req, res) => {
 });
 
 // Inicializa o servidor
-app.listen(8080, () => {
-  console.log('Servidor rodando na porta 8080');
+app.listen(8000, () => {
+  console.log('Servidor rodando na porta 8000');
 });

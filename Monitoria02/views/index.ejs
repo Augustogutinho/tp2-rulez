@@ -1,0 +1,18 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Nome</title>
+  <script src="/scripts.js" defer></script>
+</head>
+<body>
+  <h1>Digite seu nome</h1>
+  <form action="/welcome" method="POST">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
