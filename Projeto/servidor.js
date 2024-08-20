@@ -105,5 +105,5 @@ app
  })
 const PORTA = 8080
 app.listen (PORTA, () => {
-    console.log(`Servidor rodando em http://lcalhost:${PORTA}`);
+    console.log(`Servidor rodando em http://localhost:${PORTA}`);
 })
