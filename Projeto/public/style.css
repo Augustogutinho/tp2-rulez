@@ -1,0 +1,41 @@
+input[type=text] {
+    margin-left: 15%;
+    margin-right:5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px 20px;
+    width: 200px;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    margin-left: 10%;
+    margin-bottom: 5%;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+.form{
+ background-color: #f2efde;
+ border-radius: 10px;
+ border-color: #231820;
+ border: 3px solid;
+ }
+
+ .header{
+    margin: 0%;
+    background-color: #231820;
+    padding: 2%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+.fundo {
+    background-color: #231820;
+}
+.rodape{
+    margin: 0%;
+    padding: 2%;
+    text-align: center;
+    color: rgb(255, 255, 255)
+}

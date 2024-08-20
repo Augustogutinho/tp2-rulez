@@ -8,35 +8,39 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
- <body>
-  <h1>Digite dois números:</h1>
+ <body class="fundo">
+  <h1 class="header">Digite dois números:</h1>
 
-  <form action="/res1" method="post" id="form1">
+  <form action="/res1" method="post" id="form1" class="form">
    <input type="text" name="n1"id="n1"/>
-   <input type="text" name="n2"id="n2"/>
    <input type="submit" value="+"/>
+   <input type="text" name="n2"id="n2"/>
+  
   </form>
 
-  <form action="/res2" method="post" id="form1">
+  <form action="/res2" method="post" id="form1" class="form">
     <input type="text" name="n1"id="n1"/>
-    <input type="text" name="n2"id="n2"/>
     <input type="submit" value="-"/>
+    <input type="text" name="n2"id="n2"/>
+  
    </form>
 
-   <form action="/res3" method="post" id="form1">
+   <form action="/res3" method="post" id="form1" class="form">
     <input type="text" name="n1"id="n1"/>
-    <input type="text" name="n2"id="n2"/>
     <input type="submit" value="*"/>
+    <input type="text" name="n2"id="n2"/>
+    
    </form>
 
-   <form action="/res4" method="post" id="form1">
+   <form action="/res4" method="post" id="form1" class="form">
     <input type="text" name="n1"id="n1"/>
-    <input type="text" name="n2"id="n2"/>
     <input type="submit" value="/"/>
+    <input type="text" name="n2"id="n2"/>
+    
    </form>
 
    
 
-  <h1>Resultado: <%=result%></h1>
+  <h1 class="rodape">Resultado: <%=result%></h1>
  </body>
 </html>
