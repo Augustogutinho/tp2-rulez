@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagem</title>
+    <link rel="stylesheet" href="../public/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="titulopg">
+        <img src="/public/logo.png" id="imagem">
+        <h1>Passagem</h1>
+    </div>
+
+    <%-include('nav')%>
+    <main>
+
+    
+        <form action="/salvar" method="post" class="passagem"> 
+            <label for="nome">Nome:</label> 
+            <input type="text" id="nome" name="nm">
+            <label for="local">Local:</label>
+            <input type="text" id="local" name="loc">
+         
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor" name="val">
+         
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="tele">
+         
+            <input type="submit" value="Reservar Passagem" class="button">
+        </form>
+    </main>
+    <%-include('rodape')%>
+</body>
+
+</html>
