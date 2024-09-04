@@ -116,7 +116,7 @@ table, th, td {
        
         }
 
-    .cxpassagem{
+    .cxlogin{
     background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -203,7 +203,7 @@ table, th, td {
       display: flex;
       justify-content: center;
     }
-    .passagem { 
+    .login { 
       width: 50%; 
       margin: 0 auto;
       margin-top: 20px; 

@@ -19,8 +19,8 @@ app.get("/barra", (requisicao, resposta) => {
 app.get("/JF", (requisicao, resposta) => {
   resposta.render("JF");
 });
-app.get("/passagem", (requisicao, resposta) => {
-  resposta.render("passagem");
+app.get("/login", (requisicao, resposta) => {
+  resposta.render("login");
 });
 app.get("/visgueiro", (requisicao, resposta) => {
   resposta.render("visgueiro");
