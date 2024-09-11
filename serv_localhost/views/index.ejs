@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectando a cidade</title>
+    <link rel="stylesheet" href="/public/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="titulopg">
+        <img src="/public/logo.png" id="imagem">
+        <h1>Horarios de Transportes</h1>
+    </div>
+    <%-include('nav')%>
+    <main id="mainhome">
+        <table class="cxhorario">
+            <tr>
+                <th colspan="3" class="titulocx">
+                    Horarios de Transportes Públicos
+                </th>
+            </tr>
+
+            <th class="titulocx">
+                <a href="/JF">João Francisco</a>
+            </th>
+
+            <th class="titulocx">
+                <a href="/barra">Barra do Furado</a>
+            </th>
+
+            <th class="titulocx">
+                <a href="/visgueiro">Visgueiro</a>
+            </th>
+
+            </tr>
+            <tr>
+                <td class="txt">
+                    06:00 AM <br>
+                    12:00 PM <br>
+                    05:00 PM
+                </td>
+                <td class="txt">
+                    06:00 AM <br>
+                    12:00 PM <br>
+                    05:00 PM
+                </td>
+                <td class="txt">
+                    06:00 AM <br>
+                    12:00 PM <br>
+                    05:00 PM
+                </td>
+            </tr>
+            <tr>
+                <th colspan="3" class="titulocx">
+                    Horário nos Feriados
+            </tr>
+            </th>
+            <tr>
+                <th class="titulocx">
+                    <a href="/JF">João Francisco</a>
+                </th>
+                <th class="titulocx">
+                    <a href="/visgueiro">Visgueiro</a>
+                </th>
+
+                <th class="titulocx">
+                    <a href="/barra">Barra do Furado</a>
+                </th>
+            </tr>
+            <tr>
+                <td class="txt">
+                    08:00 AM <br>
+                    11:30 PM <br>
+                    02:00 PM <br>
+                    05:00 PM
+                </td>
+
+
+                <td class="txt">
+                    08:00 AM <br>
+                    11:30 PM <br>
+                    02:00 PM <br>
+                    05:00 PM
+                </td>
+
+
+                <td class="txt">
+                    08:00 AM <br>
+                    11:30 PM <br>
+                    02:00 PM <br>
+                    05:00 PM
+                </td>
+            </tr>
+        </table>
+    </main>
+    <%-include('rodape')%>
+</body>
+
+</html>
