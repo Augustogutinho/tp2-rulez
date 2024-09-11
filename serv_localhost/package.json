@@ -6,6 +6,7 @@
   },
   "scripts": {
     "test": "nodemon servidor.js"
+    "start": "node servidor.js"
   },
   "name": "servidor-via-localhost",
   "version": "1.0.0",
