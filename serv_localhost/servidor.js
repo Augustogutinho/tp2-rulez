@@ -1,12 +1,14 @@
 const port = 3000;
 const express = require("express");
 const fs = require("fs");
+var path = require('path');
 
 const app = express();
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/public", express.static("public"));
+app.use("public", express.static(path.join(__dirname, "/public")));
+app.set('views', path.join(__dirname, '/views'));
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://DaviJorge:Garrison2020@cluster.eckz9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster";
@@ -20,22 +22,9 @@ const client = new MongoClient(uri, {
   }
 });
 
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
 
 
-let fileData = JSON.parse(fs.readFileSync(`users.json`));
+//let fileData = JSON.parse(fs.readFileSync(`users.json`));
 
 app.get("/", (requisicao, resposta) => {
   resposta.render("index");
@@ -53,7 +42,7 @@ app.get("/visgueiro", (requisicao, resposta) => {
   resposta.render("visgueiro");
 });
 
-app.post("/salvar", (req, res) => {
+app.post("/salvar", async (req, res) => {
   let nomeuser = req.body.nm;
   let locuser = req.body.loc;
   let valuser = req.body.val;
@@ -61,9 +50,24 @@ app.post("/salvar", (req, res) => {
 
   let cd = { nm: nomeuser, loc: locuser, val: valuser, tel: teluser };
 
-  fileData.push(cd);
-  resultado = fs.writeFileSync(`users.json`, JSON.stringify(fileData));
-  res.render("ty", { resultado });
+  //fileData.push(cd);
+  
+  //var resultado = fs.writeFileSync(`users.json`, JSON.stringify(fileData));
+  try {
+    // Conecta ao banco de dados
+    const database = client.db("Cluster"); // Substitua pelo nome do seu banco
+    const collection = database.collection("usuarios"); // Substitua pelo nome da sua coleção
+
+    // Insere o novo usuário na coleção "usuarios"
+    await collection.insertOne(cd);
+
+    res.render("ty", { resultado: "Usuário salvo com sucesso!" });
+  } catch (error) {
+    console.error(error);
+    res.render("ty", { resultado: "Erro ao salvar no banco de dados." });
+  }
+  
 });
+    
 console.log("servidor funcionando na porta:", port);
 app.listen(port);
