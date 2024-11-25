@@ -1,14 +1,15 @@
 {
-  "engines":{
+  "engines": {
     "node": "16.x"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "nodemon": "^3.1.4",
-    "mongodb": "^6"
+    "mongodb": "^6",
+    "nodemon": "^3.1.4"
   },
   "scripts": {
-     "start": "node serv_localhost/servidor.js" 
+    "start": "node serv_localhost/servidor.js"
   }
 }
